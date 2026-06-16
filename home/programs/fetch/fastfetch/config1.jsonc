@@ -1,0 +1,98 @@
+{
+  "display": {
+    "bar": {
+      "char": {
+        "elapsed": "󰝤"
+      }
+    },
+    "color": {
+      "keys": "blue"
+    },
+    "percent": {
+      "type": 2
+    },
+    "separator": "  "
+  },
+  "logo": {
+    "height": 10,
+    "width": 25,
+    "padding": {
+      "left": 2,
+      "top": 2
+    },
+    "source": "~/.config/fastfetch/nixos.png",
+    "width": 22
+  },
+  "modules": [
+    {
+      "key": " ",
+      "type": "title"
+    },
+    "break",
+    {
+      "key": " ",
+      "type": "os"
+    },
+    {
+      "format": "{1} {2}",
+      "key": " ",
+      "type": "kernel"
+    },
+    {
+      "key": " 󰅐",
+      "type": "uptime"
+    },
+    "break",
+    {
+      "key": " 󰾰",
+      "type": "host"
+    },
+    {
+      "key": " 󰻠",
+      "type": "cpu"
+    },
+    {
+      "key": " 󰍛",
+      "type": "gpu"
+    },
+    {
+      "key": " 󰨣",
+      "type": "disk"
+    },
+    {
+      "key": " ",
+      "type": "memory"
+    },
+    "break",
+    {
+      "key": " 󰕮",
+      "type": "de"
+    },
+    {
+      "key": " ",
+      "type": "wm"
+    },
+    {
+      "key": " ",
+      "type": "shell"
+    },
+    {
+      "key": " ",
+      "type": "terminal"
+    },
+    {
+      "key": " 󰏖",
+      "type": "packages"
+    },
+    {
+      "key": " ",
+      "type": "editor"
+    },
+    "break",
+    {
+      "paddingLeft": "5",
+      "symbol": "star",
+      "type": "colors"
+    }
+  ]
+}
