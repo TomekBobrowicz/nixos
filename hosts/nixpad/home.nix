@@ -2,12 +2,12 @@
   pkgs,
   config,
   inputs,
-  lib,
   ...
 }: {
   imports = [
     # Mostly user-specific configuration
     ./variables.nix
+    ./secrets
 
     # Programs
     ../../home/programs/ghostty
@@ -22,7 +22,7 @@
     ../../home/system/mime
     ../../home/system/udiskie
     ../../home/system/niri
-    ../../home/system/dms
+    ../../home/system/noctalia
 
     inputs.catppuccin.homeModules.catppuccin
   ];
@@ -48,13 +48,10 @@
       vesktop # Discord desktop app
       nautilus
       xdg-user-dirs
-      xdg-user-dirs-gtk
 
       # Utils
       zip
       unzip
-      optipng
-      jpegoptim
       pfetch
       btop
       fastfetch
@@ -91,9 +88,8 @@
       platform = "qtct";
     };
   };
-
   catppuccin = {
-    enable = false;
+    enable = true;
     accent = "lavender";
     flavor = "mocha";
     gtk = {
@@ -103,16 +99,18 @@
       };
     };
     ghostty = {
+      enable = true;
+    };
+    btop = {
       enable = false;
     };
     vscode = {
       profiles = {
         default = {
-          enable = false;
+          enable = true;
         };
       };
     };
   };
-
   programs.home-manager.enable = true;
 }

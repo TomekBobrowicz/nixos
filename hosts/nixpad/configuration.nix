@@ -12,7 +12,7 @@
     ../../nixos/home-manager.nix
     ../../nixos/nix.nix
     ../../nixos/systemd-boot.nix
-    ../../nixos/dmsgreet.nix
+    ../../nixos/greeter.nix
     ../../nixos/users.nix
     ../../nixos/utils.nix
     ../../nixos/niri.nix

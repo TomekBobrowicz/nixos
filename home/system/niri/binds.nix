@@ -53,13 +53,14 @@
 
     "Mod+Shift+Ctrl+J".action = move-column-to-monitor-down;
     "Mod+Shift+Ctrl+K".action = move-column-to-monitor-up;
-    
+
     "Mod+Space".action.spawn = [
       "noctalia"
       "msg"
       "panel-toggle"
       "launcher"
     ];
+
     "Mod+S".action.spawn = [
       "noctalia"
       "msg"
@@ -77,6 +78,19 @@
       "msg"
       "settings-toggle"
     ];
+    "Mod+L".action.spawn = [
+      "noctalia"
+      "msg"
+      "session"
+      "lock"
+    ];
+    "Mod+X".action.spawn = [
+      "noctalia"
+      "msg"
+      "panel-toggle"
+      "session"
+    ];
+
     "XF86AudioRaiseVolume".action.spawn = [
       "noctalia"
       "msg"

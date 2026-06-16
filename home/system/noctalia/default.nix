@@ -5,98 +5,149 @@
   programs.noctalia = {
     enable = true;
     settings = {
-      location.auto_locate = true;
-      dock.enabled = false;
       shell = {
-        polkit_agent = true;
+        corner_radius_scale = 1.25;
+        #shadow = {
+        #  direction = "down";
+        #  alpha = 0.52;
+        #};
+
+        panel = {
+          background_blur = true;
+          transparency_mode = "glass";
+          borders = true;
+          shadow = true;
+          launcher_placement = "centered";
+          clipboard_placement = "centered";
+          control_center_placement = "attached";
+          wallpaper_placement = "attached";
+          session_placement = "attached";
+        };
       };
-      bar = {
-        density = "default";
-        position = "top";
-        showCapsule = false;
-        widgets = {
-          left = [
-            {
-              id = "ControlCenter";
-              useDistroLogo = true;
-            }
-            {
-              id = "Wallpaper";
-            }
-            {
-              id = "Workspace";
-              labelMode = "none";
-              hideUnoccupied = false;
-            }
-          ];
-          center = [
-            {
-              id = "Clock";
-              formatHorizontal = "HH:mm";
-              formatVertical = "HH mm";
-              useMonospacedFont = true;
-            }
-          ];
-          right = [
-            {
-              id = "Tray";
-              showCapsule = false;
-            }
-            {
-              id = "NotificationHistory";
-            }
-            {
-              id = "Caffeine";
-            }
-            {
-              id = "Clipboard";
-            }
-            {
-              id = "Network";
-            }
-            {
-              id = "Bluetooth";
-            }
-            {
-              id = "Battery";
-            }
-            {
-              id = "Brightness";
-            }
-            {
-              id = "Volume";
-            }
-            {
-              id = "SystemMonitor";
-              compactMode = false;
-              diskPath = "/";
-              showCpuTemp = false;
-              showCpuUsage = true;
-              showDiskUsage = false;
-              showGpuTemp = false;
-              showLoadAverage = false;
-              showMemoryAsPercent = true;
-              showMemoryUsage = true;
-              showNetworkStats = true;
-              useMonospaceFont = true;
-              usePrimaryColor = true; # use accent color
-            }
-            {
-              id = "SessionMenu";
-              iconColor = "error";
-            }
-          ];
-        }; 
+
+      backdrop = {
+        enabled = false;
+        blur_intensity = 0.95;
+        tint_intensity = 0.55;
       };
-    };
-    settings.theme.templates = {
-      enable_builtin_templates = true;
-      builtin_ids = [
-        "ghostty"
-        "kitty"
-        "niri"
-        #"starship"
-      ];
+
+      theme = {
+        mode = "dark";
+        source = "wallpaper";
+        wallpaper_scheme = "m3-tonal-spot";
+
+        templates = {
+          enable_builtin_templates = true;
+          builtin_ids = [
+            #"ghostty"
+            #"kcolorscheme"
+            #"kitty"
+            "niri"
+            #"qt"
+            #"starship"
+          ];
+        };
+      };
+
+      wallpaper = {
+        enabled = true;
+        fill_mode = "crop";
+        transition = [
+          "fade"
+          "wipe"
+          "disc"
+          "stripes"
+          "zoom"
+          "honeycomb"
+        ];
+        transition_duration = 1500;
+        edge_smoothness = 0.3;
+        directory = "~/Pictures/Wallpapers";
+      };
+      location = {
+        autoLocate = true;
+      };
+
+      bar.default = {
+        background_opacity = 0.58;
+        radius = 18;
+        margin_ends = 0;
+        margin_edge = 5;
+        shadow = true;
+        start = [
+          "control-center"
+          "launcher"
+          "wallpaper"
+          "workspaces"
+          #"active_window"
+        ];
+        center = [
+          "clock"
+          "weather"
+        ];
+        end = [
+          "tray"
+          "notifications"
+          "clipboard"
+          "network"
+          "bluetooth"
+          "volume"
+          "brightness"
+          "battery"
+          "screenshot"
+          "theme_mode"
+          "session"
+        ];
+      };
+
+      widget.workspaces = {
+        type = "workspaces";
+        minimal = true;
+      };
+      widget.control-center = {
+        type = "control-center";
+        custom_image = "/run/current-system/sw/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+        scale = 1.25;
+      };
+      widget.network = {
+        showLabel = false;
+      };
+      widget.tray = {
+        drawer = true;
+        hidden = ["udiskie" "blueman" "Network"];
+      };
+      widget.volume = {
+        showLabel = false;
+      };
+      widget.battery = {
+        showLabel = false;
+      };
+
+      notification.background_opacity = 0.78;
+      osd.background_opacity = 0.78;
+      idle = {
+        behavior_order = ["lock" "screen-off" "lock-and-suspend"];
+        pre_action_fade_seconds = 10;
+
+        behavior = {
+          lock = {
+            action = "lock";
+            enabled = true;
+            timeout = 600;
+          };
+          screen-off = {
+            action = "screen_off";
+            enabled = true;
+            timeout = 660;
+          };
+
+          lock-and-suspend = {
+            action = "lock_and_suspend";
+            enabled = true;
+            timeout = 900;
+          };
+        };
+      };
     };
   };
 }

@@ -25,6 +25,8 @@ in {
     channel.enable = true;
     extraOptions = ''
       warn-dirty = false
+      !include "{home}/.config/sops/github_token";
+
     '';
 
     settings = {
@@ -48,7 +50,6 @@ in {
         "walker-git.cachix.org-1:vmC0ocfPWh0S/vRAQGtChuiZBTAe4wiKDeyyXM0/7pM="
         "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
       ];
-      access-tokens = ["github.com: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"];
     };
     gc = {
       automatic = autoGarbageCollector;

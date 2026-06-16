@@ -1,8 +1,4 @@
-{
-  pkgs,
-  config,
-  ...
-}: {
+{pkgs, ...}: {
   programs.ghostty = {
     enable = true;
     package = pkgs.ghostty;
@@ -15,7 +11,7 @@
       term = "xterm-256color";
       confirm-close-surface = "false";
       font-family = "JetBrainsMono NF SemiBold";
-      font-size = 15;
+      font-size = 13;
       theme = "Rose Pine";
       adjust-cell-height = "10%";
       window-theme = "dark";

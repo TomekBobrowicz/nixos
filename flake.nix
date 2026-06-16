@@ -1,5 +1,5 @@
 {
-  description = ''Simple NixOS Niri flake  '';
+  description = ''Simple NixOS Niri Noctalia flake  '';
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -31,6 +31,8 @@
       #inputs.nixpkgs.follows = "nixpkgs";
     };
     stylix.url = "github:danth/stylix";
+    catppuccin.url = "github:catppuccin/nix";
+    sops-nix.url = "github:Mic92/sops-nix";
   };
 
   outputs = inputs @ {nixpkgs, ...}: {
@@ -51,7 +53,7 @@
           ];
         };
 
-      snowflakes =
+      nixpad =
         # CHANGEME: This should match the 'hostname' in your variables.nix file
         nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
@@ -63,8 +65,10 @@
             }
             inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen1 # CHANGEME: check https://github.com/NixOS/nixos-hardware
             inputs.home-manager.nixosModules.home-manager
+            inputs.stylix.nixosModules.stylix
 
-            ./hosts/snowflakes/configuration.nix # CHANGEME: change the path to match your host folder
+            ./hosts/nixpad/configuration.nix # CHANGEME: change the path to match your host folder
+            inputs.sops-nix.nixosModules.sops
           ];
         };
     };

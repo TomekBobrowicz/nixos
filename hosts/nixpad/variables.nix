@@ -5,11 +5,11 @@
 }: {
   imports = [
     # Choose your theme here:
-    ../../themes/rose-pine.nix
+    ../../themes/catppuccin.nix
   ];
 
   config.var = {
-    hostname = "snowflakes";
+    hostname = "nixpad";
     username = "buber";
     description = "Tomek Bobrowicz";
     configDirectory =
