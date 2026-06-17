@@ -5,13 +5,9 @@
   inputs,
   ...
 }: {
-  imports = [inputs.niri.nixosModules.niri];
-
-  niri-flake.cache.enable = true;
-
   programs.niri = {
     enable = true;
-    package = pkgs.niri-unstable;
+    package = inputs.niri.packages.${pkgs.stdenv.hostPlatform.system}.niri-unstable;
   };
 
   programs.uwsm = {

@@ -1,12 +1,13 @@
 {
   config,
   pkgs,
+  inputs,
   ...
 }: let
 in {
   programs.niri = {
-    #enable = true;
-    #package = pkgs.niri-unstable;
+    enable = true;
+    package = inputs.niri.packages.${pkgs.stdenv.hostPlatform.system}.niri-unstable;
     settings = {
       environment = {
         CLUTTER_BACKEND = "wayland";

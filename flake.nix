@@ -20,15 +20,15 @@
     };
     niri = {
       url = "github:sodiboo/niri-flake";
-      # inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     noctalia = {
       url = "github:noctalia-dev/noctalia";
-      #inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     noctalia-greeter = {
       url = "github:noctalia-dev/noctalia-greeter";
-      #inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     stylix.url = "github:danth/stylix";
     catppuccin.url = "github:catppuccin/nix";
@@ -43,7 +43,6 @@
           specialArgs = {inherit inputs;};
           modules = [
             {
-              nixpkgs.overlays = [inputs.niri.overlays.niri];
             }
             inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t460 # CHANGEME: check https://github.com/NixOS/nixos-hardware
             inputs.home-manager.nixosModules.home-manager
@@ -60,9 +59,6 @@
           specialArgs = {inherit inputs;};
           modules = [
             {
-              nixpkgs.overlays = [
-                inputs.niri.overlays.niri
-              ];
             }
             inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen1 # CHANGEME: check https://github.com/NixOS/nixos-hardware
             inputs.home-manager.nixosModules.home-manager
