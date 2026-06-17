@@ -89,27 +89,19 @@
     };
   };
   catppuccin = {
+    autoEnable = true;
     enable = true;
     accent = "lavender";
     flavor = "mocha";
     gtk = {
       icon = {
-        enable = true;
+        #enable = true;
         flavor = "mocha";
       };
     };
-    ghostty = {
-      enable = true;
-    };
+
     btop = {
       enable = false;
-    };
-    vscode = {
-      profiles = {
-        default = {
-          enable = true;
-        };
-      };
     };
   };
   programs.home-manager.enable = true;
