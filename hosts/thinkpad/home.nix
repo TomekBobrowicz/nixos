@@ -81,6 +81,7 @@
     };
   };
   catppuccin = {
+    autoEnable = true;
     enable = true;
     accent = "lavender";
     flavor = "mocha";
