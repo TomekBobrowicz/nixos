@@ -90,16 +90,15 @@
   };
   catppuccin = {
     autoEnable = true;
+    autoEnable = true;
     enable = true;
     accent = "lavender";
     flavor = "mocha";
     gtk = {
       icon = {
-        #enable = true;
         flavor = "mocha";
       };
     };
-
     btop = {
       enable = false;
     };
