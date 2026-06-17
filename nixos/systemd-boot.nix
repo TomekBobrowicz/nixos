@@ -4,7 +4,10 @@
   ...
 }: {
   boot = {
+<<<<<<< HEAD
     #bootspec.enable = true;
+=======
+>>>>>>> dc229c351f57bcfc6674d5589d51ee5ee8f9f552
     loader = {
       efi.canTouchEfiVariables = true;
       systemd-boot = {
