@@ -6,7 +6,7 @@
 in {
   programs.niri = {
     #enable = true;
-    package = pkgs.niri-unstable;
+    #package = pkgs.niri-unstable;
     settings = {
       environment = {
         CLUTTER_BACKEND = "wayland";
