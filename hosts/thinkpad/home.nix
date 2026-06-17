@@ -8,6 +8,7 @@
   imports = [
     # Mostly user-specific configuration
     ./variables.nix
+    ./secrets
 
     # Programs
     ../../home/programs/ghostty
@@ -23,7 +24,8 @@
     ../../home/system/udiskie
     ../../home/system/niri
     ../../home/system/noctalia
-    ../../home/system/gtk
+
+    inputs.catppuccin.homeModules.catppuccin
   ];
 
   home = {
@@ -54,8 +56,6 @@
       cbonsai
       pipes
       cmatrix
-      papirus-icon-theme
-      adw-gtk3
     ];
     # Import my profile picture, used by the noctalia dashboard
     file.".face.icon" = {source = ./profile_picture.png;};
@@ -80,6 +80,29 @@
       platform = "qtct";
     };
   };
-
+  catppuccin = {
+    enable = true;
+    accent = "lavender";
+    flavor = "mocha";
+    gtk = {
+      icon = {
+        enable = true;
+        flavor = "mocha";
+      };
+    };
+    ghostty = {
+      enable = true;
+    };
+    btop = {
+      enable = false;
+    };
+    vscode = {
+      profiles = {
+        default = {
+          enable = true;
+        };
+      };
+    };
+  };
   programs.home-manager.enable = true;
 }
