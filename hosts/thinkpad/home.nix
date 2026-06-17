@@ -8,6 +8,7 @@
   imports = [
     # Mostly user-specific configuration
     ./variables.nix
+    ./secrets
 
     # Programs
     ../../home/programs/ghostty
@@ -23,7 +24,8 @@
     ../../home/system/udiskie
     ../../home/system/niri
     ../../home/system/noctalia
-    ../../home/system/gtk
+
+    inputs.catppuccin.homeModules.catppuccin
   ];
 
   home = {
@@ -80,6 +82,29 @@
       platform = "qtct";
     };
   };
-
+  catppuccin = {
+    enable = true;
+    accent = "lavender";
+    flavor = "mocha";
+    gtk = {
+      icon = {
+        enable = true;
+        flavor = "mocha";
+      };
+    };
+    ghostty = {
+      enable = true;
+    };
+    btop = {
+      enable = false;
+    };
+    vscode = {
+      profiles = {
+        default = {
+          enable = true;
+        };
+      };
+    };
+  };
   programs.home-manager.enable = true;
 }

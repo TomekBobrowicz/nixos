@@ -48,6 +48,7 @@
             inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t460 # CHANGEME: check https://github.com/NixOS/nixos-hardware
             inputs.home-manager.nixosModules.home-manager
             inputs.stylix.nixosModules.stylix
+            inputs.sops-nix.nixosModules.sops
 
             ./hosts/thinkpad/configuration.nix # CHANGEME: change the path to match your host folder
           ];
