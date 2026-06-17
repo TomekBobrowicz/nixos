@@ -56,8 +56,6 @@
       cbonsai
       pipes
       cmatrix
-      papirus-icon-theme
-      adw-gtk3
     ];
     # Import my profile picture, used by the noctalia dashboard
     file.".face.icon" = {source = ./profile_picture.png;};
