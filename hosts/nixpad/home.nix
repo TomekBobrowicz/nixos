@@ -90,7 +90,6 @@
   };
   catppuccin = {
     autoEnable = true;
-    autoEnable = true;
     enable = true;
     accent = "lavender";
     flavor = "mocha";
