@@ -42,6 +42,7 @@ in {
         "https://numtide.cachix.org"
         "https://walker-git.cachix.org"
         "https://noctalia.cachix.org"
+        "https://niri.cachix.org"
       ];
       trusted-public-keys = [
         "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
@@ -49,6 +50,7 @@ in {
         "numtide.cachix.org-1:2ps1kLBUWjxIneOy1Ik6cQjb41X0iXVXeHigGmycPPE="
         "walker-git.cachix.org-1:vmC0ocfPWh0S/vRAQGtChuiZBTAe4wiKDeyyXM0/7pM="
         "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+        "niri.cachix.org-1:Wv03N9b7X/T1qg17v7yAnE00d9gscT3S67i1W6rMPrU="
       ];
     };
     gc = {
