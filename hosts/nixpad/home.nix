@@ -48,6 +48,7 @@
       vesktop # Discord desktop app
       nautilus
       xdg-user-dirs
+      zathura
 
       # Utils
       zip
