@@ -1,4 +1,4 @@
-# thinknix
+# Nixos Niri Noctalia stack
 
 A NixOS flake configuration for two ThinkPad laptops, built around [Niri](https://github.com/YaLTeR/niri) and [noctalia](https://github.com/noctalia-dev/noctalia), themed with [Stylix](https://github.com/danth/stylix) and [Catppuccin](https://github.com/catppuccin/nix).
 
