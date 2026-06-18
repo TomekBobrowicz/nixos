@@ -25,6 +25,7 @@ in {
         {command = ["${pkgs.xwayland-satellite}/bin/xwayland-satellite"];}
         {command = ["${pkgs.xdg-desktop-portal-gnome}/libexec/xdg-desktop-portal-gnome"];}
         {command = ["noctalia"];}
+        {command = ["systemctl --user start sops-nix"];}
       ];
       cursor = {
         theme = "phinger-cursors-light";
