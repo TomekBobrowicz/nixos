@@ -17,6 +17,7 @@
     ../../home/programs/fetch
     ../../home/programs/git
     ../../home/programs/media
+    ../../home/programs/keepassxc
 
     # System (Desktop environment like stuff)
     ../../home/system/mime
