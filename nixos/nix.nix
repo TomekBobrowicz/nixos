@@ -1,6 +1,7 @@
 {
   config,
   inputs,
+  lib,
   ...
 }: let
   autoGarbageCollector = config.var.autoGarbageCollector;
@@ -25,7 +26,7 @@ in {
     channel.enable = true;
     extraOptions = ''
       warn-dirty = false
-      !include "${home}/.config/sops/github_token";
+      !include "/home/${config.var.username}/.config/sops/github_token";
 
     '';
 
