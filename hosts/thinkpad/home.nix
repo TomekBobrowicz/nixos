@@ -65,6 +65,12 @@
     stateVersion = "26.05";
   };
   home.enableNixpkgsReleaseCheck = false;
+  xdg.configFile."mimeapps.list".force = true;
+  xdg.configFile."ghostty/config".force = true;
+  xdg.configFile."btop/btop.conf".force = true;
+  xdg.configFile."gtk-4.0/gtk.css".force = true;
+  xdg.configFile."gtk-3.0/gtk.css".force = true;
+
   stylix.targets = {
     ghostty.enable = false;
     btop.enable = false;
@@ -87,22 +93,12 @@
     flavor = "mocha";
     gtk = {
       icon = {
-        enable = true;
         flavor = "mocha";
       };
     };
-    ghostty = {
-      enable = true;
-    };
+
     btop = {
       enable = false;
-    };
-    vscode = {
-      profiles = {
-        default = {
-          enable = true;
-        };
-      };
     };
   };
   programs.home-manager.enable = true;

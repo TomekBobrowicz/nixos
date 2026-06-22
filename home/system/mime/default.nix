@@ -1,25 +1,65 @@
+# Mime type associations for the system.
 {
-  pkgs,
   lib,
+  pkgs,
   ...
 }:
 with lib; let
   defaultApps = {
-    browser = ["google-chrome.desktop"];
-    text = ["org.gnome.TextEditor.desktop"];
+    # check desktop files here: `ls $(echo $XDG_DATA_DIRS| sed "s/:/ /g")`
+    text = [
+      # "org.gnome.TextEditor.desktop"
+      "nvim-ghostty.desktop"
+    ];
+    code = ["nvim-ghostty.desktop"];
     image = ["imv-dir.desktop"];
     audio = ["mpv.desktop"];
     video = ["mpv.desktop"];
-    directory = ["nautilus.desktop"];
+    directory = ["thunar.desktop"];
     office = ["libreoffice.desktop"];
     pdf = ["zathura.desktop"];
     terminal = ["ghostty.desktop"];
-    discord = ["discord.desktop"];
     archive = ["xarchiver.desktop"];
+    browser = ["google-chrome.desktop"];
   };
 
   mimeMap = {
     text = ["text/plain"];
+    code = [
+      "text/x-csrc"
+      "text/x-chdr"
+      "text/x-c++src"
+      "text/x-c++hdr"
+      "text/x-rust"
+      "text/x-go"
+      "text/x-java"
+      "text/x-csharp"
+
+      "text/x-python"
+      "application/x-shellscript"
+      "text/javascript"
+      "application/javascript"
+      "text/css"
+      "text/x-php"
+      "text/x-ruby"
+
+      "application/json"
+      "application/xml"
+      "text/xml"
+      "text/x-yaml"
+      "application/x-yaml"
+      "application/toml"
+      "text/x-nix"
+      "text/markdown"
+
+      "text/x-dockerfile"
+      "application/x-yaml"
+      "text/x-terraform"
+
+      "application/x-perl"
+      "text/x-lua"
+      "text/x-haskell"
+    ];
     image = [
       "image/bmp"
       "image/gif"
@@ -51,13 +91,6 @@ with lib; let
       "video/x-msvideo"
     ];
     directory = ["inode/directory"];
-    browser = [
-      "text/html"
-      "x-scheme-handler/about"
-      "x-scheme-handler/http"
-      "x-scheme-handler/https"
-      "x-scheme-handler/unknown"
-    ];
     office = [
       "application/vnd.oasis.opendocument.text"
       "application/vnd.oasis.opendocument.spreadsheet"
@@ -78,14 +111,34 @@ with lib; let
       "application/7z"
       "application/*tar"
     ];
-    discord = ["x-scheme-handler/discord"];
+    browser = [
+      "text/html"
+      "application/xhtml+xml"
+      "x-scheme-handler/http"
+      "x-scheme-handler/https"
+      "x-scheme-handler/ftp"
+    ];
+  };
+
+  nvim-ghostty = pkgs.makeDesktopItem {
+    name = "nvim-ghostty";
+    desktopName = "Neovim (Ghostty)";
+    exec = ''ghostty --title="Neovim Editor" -e nvim %F'';
+    terminal = false;
+    categories = [
+      "Development"
+      "TextEditor"
+    ];
+    mimeTypes = mimeMap.code ++ mimeMap.text;
   };
 
   associations = with lists;
-    listToAttrs (flatten (mapAttrsToList
-      (key: map (type: attrsets.nameValuePair type defaultApps."${key}"))
-      mimeMap));
+    listToAttrs (
+      flatten (mapAttrsToList (key: map (type: attrsets.nameValuePair type defaultApps."${key}")) mimeMap)
+    );
 in {
+  home.packages = [nvim-ghostty];
+
   xdg = {
     configFile."mimeapps.list".force = true;
     mimeApps = {

@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   inputs,
   ...
@@ -85,7 +84,7 @@ in {
         ];
         default-column-width = {proportion = 0.5;};
 
-        gaps = 6;
+        gaps = 5;
         struts = {
           left = 0;
           right = 0;

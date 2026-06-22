@@ -25,7 +25,7 @@ in {
         #mode = "0766";
       };
       github_token = {
-        path = "{home}/.config/sops/github_token";
+        path = "${home}/.config/sops/github_token";
         #owner = "root";
       };
     };
