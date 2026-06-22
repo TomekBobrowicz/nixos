@@ -122,6 +122,9 @@
       widget.battery = {
         showLabel = false;
       };
+      widget.brightness = {
+        showLabel = false;
+      };
 
       notification.background_opacity = 0.78;
       osd.background_opacity = 0.78;

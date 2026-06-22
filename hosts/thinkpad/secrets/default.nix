@@ -36,17 +36,14 @@ in {
       - &primary age1z2dd37j04kuqks7pqzg697mfwkw5qawxpcrng79lnvfqt9lmv4fspza463
 
     creation_rules:
-      - path_regex: hosts/nixpad/secrets/secrets.yaml$
+      - path_regex: hosts/thinkpad/secrets/secrets.yaml$
         key_groups:
           - age:
             - *primary
   '';
 
-  systemd.user.services.mbsync.Unit.After = ["sops-nix.service"];
   home.packages = with pkgs; [
     sops
     age
   ];
-
-  wayland.windowManager.hyprland.settings.exec-once = ["systemctl --user start sops-nix"];
 }

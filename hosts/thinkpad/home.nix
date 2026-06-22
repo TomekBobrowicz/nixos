@@ -18,6 +18,7 @@
     ../../home/programs/fetch
     ../../home/programs/git
     ../../home/programs/media
+    ../../home/programs/keepassxc
 
     # System (Desktop environment like stuff)
     ../../home/system/mime
@@ -44,6 +45,7 @@
       vesktop # Discord desktop app
       nautilus
       xdg-user-dirs
+      zathura # PDF viewer
 
       # Utils
       zip
