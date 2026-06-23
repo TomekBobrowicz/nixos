@@ -3,132 +3,138 @@
   pkgs,
   ...
 }: {
-  programs.niri.settings.binds = with config.lib.niri.actions; let
-    playerctl = spawn "${pkgs.playerctl}/bin/playerctl";
-  in {
-    "Mod+E".action = spawn ["nautilus"];
-    "Mod+B".action = spawn ["google-chrome-stable"];
-    "Mod+C".action = spawn ["code"];
-    "Mod+D".action = spawn ["vesktop"];
-    "Mod+Print".action.screenshot-screen = {write-to-disk = true;};
-    "Mod+Shift+S".action.screenshot = {show-pointer = false;};
-    "Mod+Return".action = spawn "${pkgs.ghostty}/bin/ghostty";
+  wayland.windowManager.niri.settings.binds = {
+    "Mod+E"."spawn" = ["nautilus"];
+    "Mod+B"."spawn" = ["google-chrome-stable"];
+    "Mod+C"."spawn" = ["code"];
+    "Mod+D"."spawn" = ["vesktop"];
+    "Mod+Return"."spawn" = ["${pkgs.ghostty}/bin/ghostty"];
 
-    "Mod+A".action = toggle-overview;
-    "Mod+Q".action = close-window;
-    "Mod+F".action = maximize-column;
+    "Ctrl+Print"."screenshot-window" = {
+      _props."show-pointer" = true;
+    };
+    "Mod+Shift+S"."screenshot" = [];
+    "Print"."screenshot-screen" = {
+      _props."show-pointer" = false;
+    };
 
-    "Mod+WheelScrollDown".action = focus-workspace-down;
-    "Mod+WheelScrollUp".action = focus-workspace-up;
+    "Mod+Return"."spawn" = ["${pkgs.ghostty}/bin/ghostty"];
 
-    "Mod+1".action = focus-workspace 1;
-    "Mod+2".action = focus-workspace 2;
-    "Mod+3".action = focus-workspace 3;
-    "Mod+4".action = focus-workspace 4;
-    "Mod+5".action = focus-workspace 5;
-    "Mod+6".action = focus-workspace 6;
-    "Mod+7".action = focus-workspace 7;
-    "Mod+8".action = focus-workspace 8;
-    "Mod+9".action = focus-workspace 9;
-    "Mod+0".action = focus-workspace 10;
+    "Mod+A"."toggle-overview" = [];
+    "Mod+Q"."close-window" = [];
+    "Mod+F"."maximize-column" = [];
 
-    "Mod+Shift+F".action = fullscreen-window;
-    "Mod+Shift+T".action = toggle-window-floating;
-    "Mod+Shift+C".action = center-visible-columns;
+    "Mod+WheelScrollDown"."focus-workspace-down" = [];
+    "Mod+WheelScrollUp"."focus-workspace-up" = [];
 
-    "Mod+Minus".action = set-column-width "-10%";
-    "Mod+Equal".action = set-column-width "+10%";
-    "Mod+Shift+Minus".action = set-window-height "-10%";
-    "Mod+Shift+Equal".action = set-window-height "+10%";
+    "Mod+1"."focus-workspace" = [1];
+    "Mod+2"."focus-workspace" = [2];
+    "Mod+3"."focus-workspace" = [3];
+    "Mod+4"."focus-workspace" = [4];
+    "Mod+5"."focus-workspace" = [5];
+    "Mod+6"."focus-workspace" = [6];
+    "Mod+7"."focus-workspace" = [7];
+    "Mod+8"."focus-workspace" = [8];
+    "Mod+9"."focus-workspace" = [9];
+    "Mod+0"."focus-workspace" = [10];
 
-    "Mod+Left".action = focus-column-left;
-    "Mod+Right".action = focus-column-right;
-    "Mod+Down".action = focus-workspace-down;
-    "Mod+Up".action = focus-workspace-up;
+    "Mod+Shift+F"."fullscreen-window" = [];
+    "Mod+Shift+T"."toggle-window-floating" = [];
+    "Mod+Shift+C"."center-visible-columns" = [];
 
-    "Mod+Shift+Left".action = move-column-left;
-    "Mod+Shift+Right".action = move-column-right;
-    "Mod+Shift+Up".action = move-column-to-workspace-up;
-    "Mod+Shift+Down".action = move-column-to-workspace-down;
+    "Mod+Minus"."set-column-width" = ["-10%"];
+    "Mod+Equal"."set-column-width" = ["+10%"];
+    "Mod+Shift+Minus"."set-window-height" = ["-10%"];
+    "Mod+Shift+Equal"."set-window-height" = ["+10%"];
 
-    "Mod+Shift+Ctrl+J".action = move-column-to-monitor-down;
-    "Mod+Shift+Ctrl+K".action = move-column-to-monitor-up;
+    "Mod+Left"."focus-column-left" = [];
+    "Mod+Right"."focus-column-right" = [];
+    "Mod+Down"."focus-workspace-down" = [];
+    "Mod+Up"."focus-workspace-up" = [];
 
-    "Mod+Space".action.spawn = [
+    "Mod+Shift+Left"."move-column-left" = [];
+    "Mod+Shift+Right"."move-column-right" = [];
+    "Mod+Shift+Up"."move-column-to-workspace-up" = [];
+    "Mod+Shift+Down"."move-column-to-workspace-down" = [];
+
+    "Mod+Shift+Ctrl+J"."move-column-to-monitor-down" = [];
+    "Mod+Shift+Ctrl+K"."move-column-to-monitor-up" = [];
+
+    "Mod+Space"."spawn" = [
       "noctalia"
       "msg"
       "panel-toggle"
       "launcher"
     ];
 
-    "Mod+S".action.spawn = [
+    "Mod+S"."spawn" = [
       "noctalia"
       "msg"
       "panel-toggle"
       "control-center"
     ];
-    "Mod+W".action.spawn = [
+    "Mod+W"."spawn" = [
       "noctalia"
       "msg"
       "panel-toggle"
       "wallpaper"
     ];
-    "Alt+S".action.spawn = [
+    "Alt+S"."spawn" = [
       "noctalia"
       "msg"
       "settings-toggle"
     ];
-    "Mod+L".action.spawn = [
+    "Mod+L"."spawn" = [
       "noctalia"
       "msg"
       "session"
       "lock"
     ];
-    "Mod+X".action.spawn = [
+    "Mod+X"."spawn" = [
       "noctalia"
       "msg"
       "panel-toggle"
       "session"
     ];
 
-    "XF86AudioRaiseVolume".action.spawn = [
+    "XF86AudioRaiseVolume"."spawn" = [
       "noctalia"
       "msg"
       "volume-up"
     ];
-    "XF86AudioLowerVolume".action.spawn = [
+    "XF86AudioLowerVolume"."spawn" = [
       "noctalia"
       "msg"
       "volume-down"
     ];
-    "XF86AudioMute".action.spawn = [
+    "XF86AudioMute"."spawn" = [
       "noctalia"
       "msg"
       "volume-mute"
     ];
-    "XF86MonBrightnessUp".action.spawn = [
+    "XF86MonBrightnessUp"."spawn" = [
       "noctalia"
       "msg"
       "brightness-up"
     ];
-    "XF86MonBrightnessDown".action.spawn = [
+    "XF86MonBrightnessDown"."spawn" = [
       "noctalia"
       "msg"
       "brightness-down"
     ];
-    "XF86AudioPlay".action.spawn = [
+    "XF86AudioPlay"."spawn" = [
       "playerctl"
       "play-pause"
     ];
-    "XF86AudioStop".action.spawn = [
+    "XF86AudioStop"."spawn" = [
       "playerctl"
       "stop"
     ];
-    "XF86AudioPrev".action.spawn = [
+    "XF86AudioPrev"."spawn" = [
       "playerctl"
       "previous"
     ];
-    "XF86AudioNext".action.spawn = [
+    "XF86AudioNext"."spawn" = [
       "playerctl"
       "next"
     ];

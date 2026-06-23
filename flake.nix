@@ -18,10 +18,12 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    niri = {
-      url = "github:sodiboo/niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #niri = {
+    #  url = "github:sodiboo/niri-flake";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
+
+    niri.url = "git+https://codeberg.org/bananad3v/niri-nix";
     noctalia = {
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
