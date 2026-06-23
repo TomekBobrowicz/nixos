@@ -30,21 +30,11 @@
           layout = "pl";
         };
       };
-      mouse = {
-        "left-handed" = [];
-      };
       touchpad = {
-        "left-handed" = [];
         tap = [];
         dwt = [];
         "natural-scroll" = [];
         "click-method" = "clickfinger";
-      };
-      trackpoint = {
-        "left-handed" = [];
-      };
-      trackball = {
-        "left-handed" = [];
       };
       "focus-follows-mouse" = [];
     };
@@ -57,10 +47,6 @@
     ];
     screenshot-path = "~/Pictures/Screenshots/Screenshot-from-%Y-%m-%d-%H-%M-%S.png";
 
-    overview = {
-      workspace-shadow.enable = false;
-      backdrop-color = "transparent";
-    };
     layout = {
       struts.top = -8;
       background-color = "#000000";
