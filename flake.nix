@@ -42,8 +42,6 @@
         nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [
-            {
-            }
             inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t460 # CHANGEME: check https://github.com/NixOS/nixos-hardware
             inputs.home-manager.nixosModules.home-manager
             inputs.stylix.nixosModules.stylix
@@ -58,8 +56,6 @@
         nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [
-            {
-            }
             inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen1 # CHANGEME: check https://github.com/NixOS/nixos-hardware
             inputs.home-manager.nixosModules.home-manager
             inputs.stylix.nixosModules.stylix
