@@ -20,8 +20,7 @@
     ];
 
     cursor = {
-      theme = "phinger-cursors-light";
-      size = 24;
+      hide-after-inactive-ms = 5000;
     };
     input = {
       keyboard = {

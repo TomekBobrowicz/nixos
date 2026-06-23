@@ -18,8 +18,6 @@
       _props."show-pointer" = false;
     };
 
-    "Mod+Return"."spawn" = ["${pkgs.ghostty}/bin/ghostty"];
-
     "Mod+A"."toggle-overview" = [];
     "Mod+Q"."close-window" = [];
     "Mod+F"."maximize-column" = [];

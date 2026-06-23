@@ -23,7 +23,7 @@
     #  inputs.nixpkgs.follows = "nixpkgs";
     #};
 
-    niri.url = "git+https://codeberg.org/bananad3v/niri-nix";
+    niri.url = "git+https://codeberg.org/BANanaD3V/niri-nix";
     noctalia = {
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
