@@ -42,12 +42,14 @@ in {
         "https://numtide.cachix.org"
         "https://noctalia.cachix.org"
         "https://niri.cachix.org"
+        "https://niri-nix.cachix.org"
       ];
       trusted-public-keys = [
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
         "numtide.cachix.org-1:2ps1kLBUWjxIneOy1Ik6cQjb41X0iXVXeHigGmycPPE="
         "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
         "niri.cachix.org-1:Wv03N9b7X/T1qg17v7yAnE00d9gscT3S67i1W6rMPrU="
+        "niri-nix.cachix.org-1:SvFtqpDcf7Sm1SMJdby1/+Y+6f3Yt3/3PMcSTKPJNJ0="
       ];
     };
     gc = {
