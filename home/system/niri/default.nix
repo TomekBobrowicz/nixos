@@ -4,6 +4,7 @@
   ...
 }: {
   imports = [
+    inputs.niri-nix.homeModules.stylix
     inputs.niri.homeModules.default
     ./settings.nix
     ./binds.nix
