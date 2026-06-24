@@ -1,34 +1,36 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: let
+  cursorShaders = pkgs.fetchFromGitHub {
+    owner = "sahaj-b";
+    repo = "ghostty-cursor-shaders";
+    rev = "06d4e90fb5410e9c4d0b3131584060adddf89406";
+    hash = "sha256-G/UIr1bKnxn1AcHl/4FL/jou6b7M2VeREslYVELxdmw=";
+  };
+  c = config.lib.stylix.colors;
+in {
   programs.ghostty = {
     enable = true;
     package = pkgs.ghostty;
     enableFishIntegration = true;
     enableZshIntegration = true;
     enableBashIntegration = true;
+    installVimSyntax = true;
     clearDefaultKeybinds = true;
     settings = {
-      title = "GhosTTY";
-      term = "xterm-256color";
-      confirm-close-surface = "false";
-      font-family = "JetBrainsMono NF SemiBold";
-      font-size = 13;
-      theme = "Rose Pine";
-      adjust-cell-height = "10%";
-      window-theme = "dark";
-      window-height = "32";
-      window-width = "110";
+      window-padding-x = 10;
+      confirm-close-surface = false;
+      window-padding-y = 10;
+      clipboard-read = "allow";
+      clipboard-write = "allow";
+      copy-on-select = "clipboard";
+      app-notifications = false;
       background-opacity = "0.80";
       background-blur-radius = "50";
-      selection-background = "#2d3f76";
-      selection-foreground = "#c8d3f5";
-      cursor-style = "bar";
-      mouse-hide-while-typing = "true";
-      wait-after-command = "false";
-      shell-integration = "detect";
-      window-save-state = "always";
-      gtk-single-instance = "true";
-      unfocused-split-opacity = "0.5";
-      quick-terminal-position = "center";
+      custom-shader = "${cursorShaders}/cursor_warp.glsl";
+      custom-shader-animation = "always";
       shell-integration-features = "cursor,sudo";
       bold-is-bright = "false";
       keybind = [

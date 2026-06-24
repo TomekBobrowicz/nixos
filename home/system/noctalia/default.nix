@@ -44,11 +44,13 @@
           enable_builtin_templates = true;
           builtin_ids = [
             #"ghostty"
-            #"kcolorscheme"
-            #"kitty"
+            #"btop"
+            #"neovim"
             "niri"
             #"qt"
-            #"starship"
+            #"gtk3"
+            #gtk4"
+            ss
           ];
         };
       };

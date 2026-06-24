@@ -16,16 +16,6 @@
       border-size = 3;
       animation-speed = "fast"; # "fast" | "medium" | "slow"
       fetch = "none"; # "nerdfetch" | "neofetch" | "pfetch" | "none"
-      textColorOnWallpaper =
-        config.lib.stylix.colors.base05; # Color of the text displayed on the wallpaper (Lockscreen, display manager, ...)
-
-      bar = {
-        # Hyprpanel
-        position = "top"; # "top" | "bottom"
-        transparent = true;
-        transparentButtons = false;
-        floating = true;
-      };
     };
     description = "Theme configuration options";
   };
@@ -62,8 +52,8 @@
 
     fonts = {
       monospace = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrainsMono NF SemiBold";
+        package = pkgs.maple-mono.Normal-NF-unhinted;
+        name = "Maple Mono Normal NF SemiBold";
       };
       sansSerif = {
         package = pkgs.source-sans-pro;
@@ -83,7 +73,7 @@
     };
 
     polarity = "dark";
-    #image = ../../walls/w11/jpg;
+    #image = ./walls/kanagawa.jpg;
     #   url = "https://raw.githubusercontent.com/orangci/walls-catppuccin-mocha/master/street.png";
     #   sha256 = "sha256-xSx87bFMgwMkYKiqflXoSmjMiyOBPdKwAPI0lGOeOFI=";
     # };
