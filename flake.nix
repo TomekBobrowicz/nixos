@@ -26,7 +26,7 @@
     niri.url = "git+https://codeberg.org/BANanaD3V/niri-nix";
     noctalia = {
       url = "github:noctalia-dev/noctalia";
-      # inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     noctalia-greeter = {
       url = "github:noctalia-dev/noctalia-greeter";
@@ -71,7 +71,7 @@
         nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [
-            inputs.nixos-hardware.nixosModules.gigabyte-b550 # CHANGEME: check https://github.com/NixOS/nixos-hardware
+            #inputs.nixos-hardware.nixosModules.gigabyte-b550 # CHANGEME: check https://github.com/NixOS/nixos-hardware
             inputs.home-manager.nixosModules.home-manager
             inputs.stylix.nixosModules.stylix
 

@@ -4,7 +4,11 @@
   ];
   programs.noctalia = {
     enable = true;
+    systemd.enable = true;
     settings = {
+      polkit = {
+        enabled = true;
+      };
       shell = {
         corner_radius_scale = 1.25;
         shadow = {

@@ -18,7 +18,18 @@
       ["noctalia"]
       ["systemctl --user start sops-nix"]
     ];
-
+    layer-rule = [
+      {
+        match = [
+          {_props.namespace = "noctalia-wallpaper*";}
+        ];
+        "place-within-backdrop" = true;
+      }
+    ];
+    layout.background-color = "transparent";
+    overview.workspace-shadow = {
+      off = [];
+    };
     cursor = {
       hide-after-inactive-ms = 5000;
     };
@@ -49,7 +60,6 @@
 
     layout = {
       struts.top = -8;
-      background-color = "#000000";
 
       always-center-single-column = [];
       default-column-width.proportion = 0.5;
