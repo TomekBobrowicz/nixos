@@ -52,8 +52,8 @@
 
     fonts = {
       monospace = {
-        package = pkgs.maple-mono.Normal-NF-unhinted;
-        name = "Maple Mono Normal NF SemiBold";
+        package = pkgs.nerd-fonts.jetbrains-mono;
+        name = "JetBrainsMono NF SemiBold";
       };
       sansSerif = {
         package = pkgs.source-sans-pro;

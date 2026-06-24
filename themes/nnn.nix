@@ -48,13 +48,13 @@
     cursor = {
       name = "BreezeX-RosePine-Linux";
       package = pkgs.rose-pine-cursor;
-      size = 20;
+      size = 24;
     };
 
     fonts = {
       monospace = {
-        package = pkgs.maple-mono.NF;
-        name = "Maple Mono NF";
+        package = pkgs.nerd-fonts.jetbrains-mono;
+        name = "JetBrainsMono NF SemiBold";
       };
       sansSerif = {
         package = pkgs.source-sans-pro;

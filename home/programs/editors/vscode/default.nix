@@ -34,7 +34,7 @@
           "window.titleBarStyle" = "custom";
           "editor.fontLigatures" = true;
           "editor.minimap.enabled" = false;
-          "workbench.colorTheme" = "Rosé Pine";
+          #"workbench.colorTheme" = "Rosé Pine";
 
           # --- Integracja z Git ---
           "git.enabled" = true;

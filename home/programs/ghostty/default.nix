@@ -20,6 +20,9 @@ in {
     installVimSyntax = true;
     clearDefaultKeybinds = true;
     settings = {
+      theme = "Catppuccin Mocha";
+      font-family = "JetBrainsMono NF SemiBold ";
+      font-size = 13;
       window-padding-x = 10;
       confirm-close-surface = false;
       window-padding-y = 10;
