@@ -31,8 +31,8 @@ in {
       clipboard-write = "allow";
       copy-on-select = "clipboard";
       app-notifications = false;
-      background-opacity = "0.80";
-      background-blur-radius = "50";
+      background-opacity = "0.85";
+      background-blur-radius = "35";
       unfocused-split-opacity = "0.80";
       custom-shader = "${cursorShaders}/cursor_warp.glsl";
       custom-shader-animation = "always";
