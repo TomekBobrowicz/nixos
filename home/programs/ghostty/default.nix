@@ -20,6 +20,7 @@ in {
     installVimSyntax = true;
     clearDefaultKeybinds = true;
     settings = {
+      term = "xterm-256color";
       theme = "Catppuccin Mocha";
       font-family = "JetBrainsMono NF SemiBold ";
       font-size = 13;
@@ -32,6 +33,7 @@ in {
       app-notifications = false;
       background-opacity = "0.80";
       background-blur-radius = "50";
+      unfocused-split-opacity = "0.80";
       custom-shader = "${cursorShaders}/cursor_warp.glsl";
       custom-shader-animation = "always";
       shell-integration-features = "cursor,sudo";
