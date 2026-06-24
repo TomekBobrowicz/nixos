@@ -66,6 +66,19 @@
             inputs.sops-nix.nixosModules.sops
           ];
         };
+      darkside =
+        # CHANGEME: This should match the 'hostname' in your variables.nix file
+        nixpkgs.lib.nixosSystem {
+          specialArgs = {inherit inputs;};
+          modules = [
+            inputs.nixos-hardware.nixosModules.gigabyte-b550 # CHANGEME: check https://github.com/NixOS/nixos-hardware
+            inputs.home-manager.nixosModules.home-manager
+            inputs.stylix.nixosModules.stylix
+
+            ./hosts/darkside/configuration.nix # CHANGEME: change the path to match your host folder
+            inputs.sops-nix.nixosModules.sops
+          ];
+        };
     };
   };
 }
