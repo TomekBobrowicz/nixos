@@ -2,6 +2,7 @@
   pkgs,
   config,
   inputs,
+  lib,
   ...
 }: {
   imports = [
@@ -103,6 +104,13 @@
     btop = {
       enable = false;
     };
+  };
+  home.activation = {
+    removeGhosttyBackup = lib.hm.dag.entryBefore ["linkGeneration"] ''
+      if [ -e "/home/buber/.config/ghostty/config.backup" ]; then
+        rm -f "/home/buber/.config/ghostty/config.backup"
+      fi
+    '';
   };
   programs.home-manager.enable = true;
 }

@@ -62,6 +62,8 @@ in {
     ipp-usb.enable = true;
     flatpak.enable = true;
     fwupd.enable = true;
+    power-profiles-daemon.enable = true;
+    upower.enable = true;
   };
 
   console.keyMap = keyboardLayout;
@@ -85,8 +87,6 @@ in {
       packages = with pkgs; [gcr gnome-settings-daemon];
     };
     gvfs.enable = true;
-    upower.enable = true;
-    power-profiles-daemon.enable = true;
     udisks2.enable = true;
   };
 

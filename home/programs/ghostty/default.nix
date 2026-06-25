@@ -1,6 +1,7 @@
 {
   pkgs,
   config,
+  lib,
   ...
 }: let
   cursorShaders = pkgs.fetchFromGitHub {
@@ -21,7 +22,7 @@ in {
     clearDefaultKeybinds = true;
     settings = {
       term = "xterm-256color";
-      theme = "Catppuccin Mocha";
+      theme = "noctalia";
       font-family = "JetBrainsMono NF SemiBold ";
       font-size = 13;
       window-padding-x = 10;
@@ -33,7 +34,6 @@ in {
       app-notifications = false;
       background-opacity = "0.85";
       background-blur-radius = "35";
-      unfocused-split-opacity = "0.80";
       custom-shader = "${cursorShaders}/cursor_warp.glsl";
       custom-shader-animation = "always";
       shell-integration-features = "cursor,sudo";

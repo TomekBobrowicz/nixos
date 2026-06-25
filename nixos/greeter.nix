@@ -13,10 +13,15 @@
 
     # Optional configuration
     greeter-args = "";
-    settings.cursor = {
-      theme = "Adwaita";
-      size = 24;
-      package = pkgs.adwaita-icon-theme;
+    settings = {
+      cursor = {
+        theme = "Adwaita";
+        size = 24;
+        package = pkgs.adwaita-icon-theme;
+      };
+      keyboard = {
+        layout = "pl";
+      };
     };
   };
 }
