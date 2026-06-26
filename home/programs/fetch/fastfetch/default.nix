@@ -1,8 +1,10 @@
 {
-
+  pkgs,
+  lib,
+  ...
+}: {
   programs.fastfetch = {
     enable = true;
-
     settings = {
       logo = {
         source = "~/.config/fastfetch/nixos.png}";
@@ -56,6 +58,16 @@
           "type" = "uptime";
           "key" = " 󰅐";
         }
+        {
+          "type" = "command";
+          "key" = " 󰔠";
+          "text" = "${lib.getExe pkgs.hourglass}";
+        }
+        {
+          "type" = "command";
+          "key" = " ";
+          "text" = "${lib.getExe pkgs.hourglass} -s 2026-07-26";
+        }
 
         "break"
         {
@@ -83,10 +95,10 @@
           "key" = " ";
         }
         /*
-            {
-            "type" = "display";
-            "key" = " 󰍹";
-          }
+          {
+          "type" = "display";
+          "key" = " 󰍹";
+        }
         */
         "break"
         {
@@ -113,6 +125,11 @@
           "type" = "editor";
           "key" = " ";
         }
+        {
+          "type" = "command";
+          "key" = " ";
+          "text" = "${pkgs.nix-gen}/bin/nix-gen -c";
+        }
 
         "break"
         {
@@ -126,6 +143,5 @@
   home.file = {
     ".config/fastfetch/nixos.png".source = ./nixos.png;
     ".config/fastfetch/config1.jsonc".source = ./config1.jsonc;
-
   };
 }

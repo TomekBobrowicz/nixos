@@ -22,8 +22,16 @@
     ./hardware-configuration.nix
     ./variables.nix
   ];
-
+  nixpkgs = {
+    overlays = [inputs.asteroid.overlays.default];
+  };
   home-manager.users."${config.var.username}" = import ./home.nix;
+  environment = {
+    systemPackages = with pkgs; [
+      hourglass
+      nix-gen
+    ];
+  };
 
   system.activationScripts.script.text = ''
     mkdir -p /var/lib/AccountsService/{icons,users}

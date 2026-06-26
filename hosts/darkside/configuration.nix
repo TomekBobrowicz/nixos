@@ -1,5 +1,6 @@
 {
   config,
+  inputs,
   pkgs,
   ...
 }: {
@@ -21,6 +22,9 @@
     ./hardware-configuration.nix
     ./variables.nix
   ];
+  nixpkgs = {
+    overlays = [inputs.asteroid.overlays.default];
+  };
   system.activationScripts.script.text = ''
     mkdir -p /var/lib/AccountsService/{icons,users}
 
@@ -44,6 +48,12 @@
   stylix.enableReleaseChecks = false;
 
   home-manager.users."${config.var.username}" = import ./home.nix;
+  environment = {
+    systemPackages = with pkgs; [
+      hourglass
+      nix-gen
+    ];
+  };
 
   # Don't touch this
   system.stateVersion = "26.05";

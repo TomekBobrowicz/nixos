@@ -1,5 +1,25 @@
 {
   "nodes": {
+    "asteroid": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1782256546,
+        "narHash": "sha256-wM3WSxaApRp8vZyoywvkTMDa+iKBNnL216IRTB8eRWo=",
+        "owner": "alxhr0",
+        "repo": "asteroid",
+        "rev": "2671579ab418e551c1d099bbc9c67db82e7ad1c0",
+        "type": "gitlab"
+      },
+      "original": {
+        "owner": "alxhr0",
+        "repo": "asteroid",
+        "type": "gitlab"
+      }
+    },
     "base16": {
       "inputs": {
         "fromYaml": "fromYaml"
@@ -572,6 +592,7 @@
     },
     "root": {
       "inputs": {
+        "asteroid": "asteroid",
         "catppuccin": "catppuccin",
         "home-manager": "home-manager",
         "hourglass": "hourglass",

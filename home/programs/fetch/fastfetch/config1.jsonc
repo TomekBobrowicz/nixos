@@ -42,6 +42,16 @@
       "key": " 󰅐",
       "type": "uptime"
     },
+    {
+      "key": " 󰔠",
+      "text": "hourglass",
+      "type": "command"
+    },
+    {
+      "key": " ",
+      "text": "hourglass -s 2026-07-26",
+      "type": "command"
+    },
     "break",
     {
       "key": " 󰾰",
@@ -87,6 +97,11 @@
     {
       "key": " ",
       "type": "editor"
+    },
+    {
+      "key": " ",
+      "text": "nix-gen -c",
+      "type": "command"
     },
     "break",
     {

@@ -34,6 +34,10 @@
     stylix.url = "github:danth/stylix";
     catppuccin.url = "github:catppuccin/nix";
     sops-nix.url = "github:Mic92/sops-nix";
+    asteroid = {
+      url = "gitlab:alxhr0/asteroid";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {nixpkgs, ...}: {
