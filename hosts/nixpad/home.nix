@@ -47,6 +47,7 @@
       waypaper # Wallpaper manager
       libreoffice # Office suite
       # vesktop # Discord desktop app
+      equibop
       nautilus
       xdg-user-dirs
       zathura

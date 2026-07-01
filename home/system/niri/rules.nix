@@ -31,7 +31,7 @@ in {
         {match._props.app-id = "code";}
         {match._props.app-id = "obsidian";}
         {match._props.app-id = "dev.zed.Zed";}
-        {match._props.app-id = "vesktop";}
+        {match._props.app-id = "equibop";}
         {match._props.app-id = "^libreoffice-.*$";}
         {match._props.title = "^LibreOffice";}
         {match._props.app-id = "ONLYOFFICE";}

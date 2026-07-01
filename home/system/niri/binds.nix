@@ -7,7 +7,7 @@
     "Mod+E"."spawn" = ["nautilus"];
     "Mod+B"."spawn" = ["google-chrome-stable"];
     "Mod+C"."spawn" = ["code"];
-    "Mod+D"."spawn" = ["vesktop"];
+    "Mod+D"."spawn" = ["equibop"];
     "Mod+Return"."spawn" = ["${pkgs.ghostty}/bin/ghostty"];
 
     "Ctrl+Print"."screenshot-window" = {

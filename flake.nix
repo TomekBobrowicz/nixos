@@ -37,7 +37,6 @@
       url = "gitlab:alxhr0/asteroid";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixcord.url = "github:FlameFlag/nixcord";
   };
 
   outputs = inputs @ {nixpkgs, ...}: {
