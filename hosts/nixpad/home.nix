@@ -46,7 +46,7 @@
       google-chrome # Web browser
       waypaper # Wallpaper manager
       libreoffice # Office suite
-      vesktop # Discord desktop app
+      # vesktop # Discord desktop app
       nautilus
       xdg-user-dirs
       zathura

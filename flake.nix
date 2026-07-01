@@ -5,7 +5,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    nvf.url = "github:notashelf/nvf";
     hourglass = {
       url = "gitlab:Alxhr0/hourglass";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -38,6 +37,7 @@
       url = "gitlab:alxhr0/asteroid";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixcord.url = "github:FlameFlag/nixcord";
   };
 
   outputs = inputs @ {nixpkgs, ...}: {
