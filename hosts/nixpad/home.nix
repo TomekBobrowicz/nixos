@@ -102,6 +102,9 @@
         flavor = "mocha";
       };
     };
+    ghostty = {
+      enable = false;
+    };
     btop = {
       enable = false;
     };

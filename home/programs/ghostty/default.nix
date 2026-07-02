@@ -22,12 +22,12 @@ in {
     clearDefaultKeybinds = true;
     settings = {
       term = "xterm-256color";
-      theme = "noctalia";
-      font-family = "JetBrainsMono NF SemiBold ";
+      #theme = "noctalia";
+      font-family = "Maple Mono NF SemiBold ";
       font-size = 13;
-      window-padding-x = 10;
+      window-padding-x = 12;
+      window-padding-y = 12;
       confirm-close-surface = false;
-      window-padding-y = 10;
       clipboard-read = "allow";
       clipboard-write = "allow";
       copy-on-select = "clipboard";
