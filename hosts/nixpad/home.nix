@@ -90,6 +90,7 @@
       enable = false;
       platform = "qtct";
     };
+    nixcord.enable = true;
   };
   catppuccin = {
     autoEnable = true;
