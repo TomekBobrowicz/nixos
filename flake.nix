@@ -37,7 +37,7 @@
       url = "gitlab:alxhr0/asteroid";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-s  };
+  };
 
   outputs = inputs @ {nixpkgs, ...}: {
     nixosConfigurations = {
