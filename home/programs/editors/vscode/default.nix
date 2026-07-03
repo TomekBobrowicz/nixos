@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   # Dodajemy narzędzia bezpośrednio do pakietów użytkownika,
   # aby były dostępne globalnie w terminalu (w tym dla 'nix fmt')
   home.packages = with pkgs; [
@@ -32,6 +36,7 @@
 
         userSettings = {
           "window.titleBarStyle" = "custom";
+          "editor.fontSize" = lib.mkForce 17;
           "editor.fontLigatures" = true;
           "editor.minimap.enabled" = false;
           #"workbench.colorTheme" = "Rosé Pine";

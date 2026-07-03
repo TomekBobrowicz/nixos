@@ -85,7 +85,7 @@
     neovim.enable = false;
     nvf.enable = false;
     nixvim.enable = false;
-    vscode.enable = false;
+    vscode.enable = true;
     starship.enable = false;
     qt = {
       enable = false;
@@ -95,16 +95,20 @@
   catppuccin = {
     autoEnable = true;
     enable = true;
-    accent = "lavender";
+    accent = "yellow";
     flavor = "mocha";
     gtk = {
       icon = {
         flavor = "mocha";
       };
     };
+    ghostty = {
+      enable = false;
+    };
     btop = {
       enable = false;
     };
+    vscode.profiles.default .enable = false;
   };
   home.activation = {
     removeGhosttyBackup = lib.hm.dag.entryBefore ["linkGeneration"] ''

@@ -64,7 +64,12 @@
       always-center-single-column = [];
       default-column-width.proportion = 0.5;
 
-      focus-ring.width = 2;
+      focus-ring = {
+        active-color._args = ["#dcd7ba"];
+        inactive-color._args = ["#00000000"];
+        width = 2;
+      };
+
       border.off = [];
 
       tab-indicator = {
