@@ -21,11 +21,7 @@ in {
       only_physical = true;
       io_mode = true;
       io_graph_combined = false;
-      color_theme = "rose-pine";
+      color_theme = "noctalia";
     };
-  };
-  xdg.configFile."btop/themes" = {
-    source = rosePineBtop;
-    recursive = true;
   };
 }

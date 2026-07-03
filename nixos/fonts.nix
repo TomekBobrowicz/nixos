@@ -7,6 +7,7 @@
       noto-fonts-color-emoji
       jetbrains-mono
       maple-mono.NF # Maple Mono, patched with Nerd Font glyphs (mono default).
+      iosevka # Iosevka, patched with Nerd Font glyphs (mono default).
     ];
 
     enableDefaultPackages = false;

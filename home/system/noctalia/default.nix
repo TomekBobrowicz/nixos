@@ -44,7 +44,7 @@
           enable_builtin_templates = true;
           builtin_ids = [
             "ghostty"
-            #"btop"
+            "btop"
             #"neovim"
             "niri"
             #"qt"
