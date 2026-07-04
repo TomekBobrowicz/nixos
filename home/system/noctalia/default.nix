@@ -1,4 +1,8 @@
-{inputs, ...}: {
+{
+  inputs,
+  lib,
+  ...
+}: {
   imports = [
     inputs.noctalia.homeModules.default
   ];
@@ -37,7 +41,7 @@
 
       theme = {
         mode = "dark";
-        source = "wallpaper";
+        source = lib.mkForce "wallpaper";
         wallpaper_scheme = "m3-tonal-spot";
 
         templates = {
@@ -131,8 +135,8 @@
         showLabel = false;
       };
 
-      notification.background_opacity = 0.78;
-      osd.background_opacity = 0.78;
+      notification.background_opacity = lib.mkForce 0.78;
+      osd.background_opacity = lib.mkForce 0.78;
       idle = {
         behavior_order = ["lock" "screen-off" "lock-and-suspend"];
         pre_action_fade_seconds = 5;

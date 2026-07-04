@@ -87,6 +87,7 @@
     nixvim.enable = false;
     vscode.enable = true;
     starship.enable = false;
+    noctalia.enable = false;
     qt = {
       enable = false;
       platform = "qtct";
