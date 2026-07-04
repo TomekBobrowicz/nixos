@@ -84,8 +84,9 @@
     neovim.enable = false;
     nvf.enable = false;
     nixvim.enable = false;
-    vscode.enable = false;
+    vscode.enable = true;
     starship.enable = false;
+    noctalia.enable = false;
     qt = {
       enable = false;
       platform = "qtct";
@@ -108,6 +109,7 @@
     btop = {
       enable = false;
     };
+    vscode.profiles.default .enable = false;
   };
   programs.home-manager.enable = true;
 }
