@@ -36,13 +36,13 @@
     packages = with pkgs; [
       # Apps
       obsidian # Note taking app
-      textpieces # Manipulate texts
-      curtail # Compress images
-      resources
+      #textpieces # Manipulate texts
+      #curtail # Compress images
+      #resources
       gnome-text-editor
       google-chrome # Web browser
-      libreoffice # Office suite
-      vesktop # Discord desktop app
+      #libreoffice # Office suite
+      equibop# Discord desktop app
       nautilus
       xdg-user-dirs
       zathura # PDF viewer
@@ -91,7 +91,7 @@
   catppuccin = {
     autoEnable = true;
     enable = true;
-    accent = "lavender";
+    accent = "yellow";
     flavor = "mocha";
     gtk = {
       icon = {
@@ -102,6 +102,7 @@
     btop = {
       enable = false;
     };
+    vscode.profiles.default.enable=false;
   };
   programs.home-manager.enable = true;
 }

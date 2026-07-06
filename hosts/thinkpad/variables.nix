@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    ../../themes/catppuccin.nix
+    ../../themes/kanagawa.nix
   ];
 
   config.var = {
