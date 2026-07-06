@@ -17,28 +17,33 @@
 
     profiles = {
       default = {
-        extensions = with pkgs.vscode-extensions; [
-          # Git i produktywność
-          eamodio.gitlens
-          donjayamanne.githistory
-          mkhl.direnv
+        extensions = with pkgs.vscode-extensions;
+          [
+            # Git i produktywność
+            eamodio.gitlens
+            donjayamanne.githistory
+            mkhl.direnv
 
-          # Języki, LSP i formatowanie
-          bbenoist.nix # Wtyczka Nix-IDE (LSP dla Nix, integracja z Alejandrą)
-          jnoortheen.nix-ide
-          kamadorueda.alejandra # Wtyczka Alejandry dla VS Code
-          jeff-hykin.better-nix-syntax
-          arrterian.nix-env-selector
-          shd101wyy.markdown-preview-enhanced
-          tamasfe.even-better-toml
-          mvllow.rose-pine
-        ];
+            # Języki, LSP i formatowanie
+            bbenoist.nix # Wtyczka Nix-IDE (LSP dla Nix, integracja z Alejandrą)
+            jnoortheen.nix-ide
+            kamadorueda.alejandra # Wtyczka Alejandry dla VS Code
+            jeff-hykin.better-nix-syntax
+            arrterian.nix-env-selector
+            shd101wyy.markdown-preview-enhanced
+            tamasfe.even-better-toml
+            mvllow.rose-pine
+          ]
+          ++ (with pkgs.open-vsx; [
+            metaphore.kanagawa-vscode-color-theme
+          ]);
 
         userSettings = {
           "window.titleBarStyle" = "custom";
           "editor.fontSize" = lib.mkForce 17;
           "editor.fontLigatures" = true;
           "editor.minimap.enabled" = false;
+          "workbench.colorTheme" = "Kanagawa Wave";
           #"workbench.colorTheme" = "Rosé Pine";
 
           # --- Integracja z Git ---

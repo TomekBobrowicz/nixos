@@ -37,6 +37,7 @@
       url = "gitlab:alxhr0/asteroid";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
   outputs = inputs @ {nixpkgs, ...}: {
@@ -52,6 +53,7 @@
             inputs.sops-nix.nixosModules.sops
 
             ./hosts/thinkpad/configuration.nix # CHANGEME: change the path to match your host folder
+            {nixpkgs.overlays = [inputs.nix-vscode-extensions.overlays.default];}
           ];
         };
 
