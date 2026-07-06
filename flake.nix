@@ -67,6 +67,7 @@
             inputs.stylix.nixosModules.stylix
 
             ./hosts/nixpad/configuration.nix # CHANGEME: change the path to match your host folder
+            {nixpkgs.overlays = [inputs.nix-vscode-extensions.overlays.default];}
             inputs.sops-nix.nixosModules.sops
           ];
         };
@@ -80,6 +81,7 @@
             inputs.stylix.nixosModules.stylix
 
             ./hosts/darkside/configuration.nix # CHANGEME: change the path to match your host folder
+            {nixpkgs.overlays = [inputs.nix-vscode-extensions.overlays.default];}
             inputs.sops-nix.nixosModules.sops
           ];
         };

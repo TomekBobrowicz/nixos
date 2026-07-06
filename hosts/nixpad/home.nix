@@ -84,7 +84,7 @@
     neovim.enable = false;
     nvf.enable = false;
     nixvim.enable = false;
-    vscode.enable = true;
+    vscode.enable = false;
     starship.enable = false;
     noctalia.enable = false;
     qt = {
