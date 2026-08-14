@@ -10,7 +10,7 @@
   ];
 
   config.var = {
-    hostname = "nixpad";
+    hostname = "fury";
     username = "buber";
     description = "Tomek Bobrowicz";
     configDirectory =

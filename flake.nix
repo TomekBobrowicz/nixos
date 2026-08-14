@@ -58,7 +58,7 @@
           ];
         };
 
-      nixpad =
+      darkside =
         # CHANGEME: This should match the 'hostname' in your variables.nix file
         nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
@@ -67,12 +67,12 @@
             inputs.home-manager.nixosModules.home-manager
             inputs.stylix.nixosModules.stylix
 
-            ./hosts/nixpad/configuration.nix # CHANGEME: change the path to match your host folder
+            ./hosts/darkside/configuration.nix # CHANGEME: change the path to match your host folder
             {nixpkgs.overlays = [inputs.nix-vscode-extensions.overlays.default];}
             inputs.sops-nix.nixosModules.sops
           ];
         };
-      darkside =
+      fury =
         # CHANGEME: This should match the 'hostname' in your variables.nix file
         nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
@@ -81,7 +81,7 @@
             inputs.home-manager.nixosModules.home-manager
             inputs.stylix.nixosModules.stylix
 
-            ./hosts/darkside/configuration.nix # CHANGEME: change the path to match your host folder
+            ./hosts/fury/configuration.nix # CHANGEME: change the path to match your host folder
             {nixpkgs.overlays = [inputs.nix-vscode-extensions.overlays.default];}
             inputs.sops-nix.nixosModules.sops
           ];

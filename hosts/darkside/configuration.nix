@@ -48,7 +48,7 @@
   stylix.targets.chromium.enable = false;
   stylix.enableReleaseChecks = false;
 
-    programs.kineticwe.enable = true;
+  programs.kineticwe.enable = true;
 
 
   home-manager.users."${config.var.username}" = import ./home.nix;
