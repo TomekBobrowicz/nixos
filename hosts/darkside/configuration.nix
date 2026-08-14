@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
+    inputs.kineticwe.nixosModules.default
     # Mostly system related configuration
     ../../nixos/audio.nix
     ../../nixos/amd.nix
@@ -46,6 +47,9 @@
   services.accounts-daemon.enable = true;
   stylix.targets.chromium.enable = false;
   stylix.enableReleaseChecks = false;
+
+    programs.kineticwe.enable = true;
+
 
   home-manager.users."${config.var.username}" = import ./home.nix;
   environment = {

@@ -17,10 +17,11 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    #niri = {
-    #  url = "github:sodiboo/niri-flake";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
+
+    kineticwe = {
+      url = "gitlab:theblackdon/kineticwe";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     niri.url = "git+https://codeberg.org/BANanaD3V/niri-nix";
 
